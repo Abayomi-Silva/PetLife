@@ -5,10 +5,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body{
-    color: #263138;
-}
-
 header{
     background-color: #ff9a6c;
     padding: 24px 80px 24px 80px;
@@ -116,12 +112,21 @@ h1, h2{
     right: 24px;
 }
 
-.duvida .paragrafo{
+.duvida .paragrafo {
     border-right: 1px solid #ff725e;
     border-left: 1px solid #ff725e;
     border-bottom: 1px solid #ff725e;
     border-radius: 0 0 8px 8px;
     margin-top: -8px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .2s;
+}
+
+.duvida.ativa .paragrafo{
+    height: fit-content;
+    opacity: 1;
     padding: 24px;
 }
 
